@@ -1,50 +1,123 @@
 {
-   "sex":{
-      "Description":"gender of the participant as reported by the participant",
-      "Levels":{
-         "F":"female",
-         "M":"male"
+   "sex": {
+      "Description": "gender of the participant as reported by the participant",
+      "Levels": {
+         "F": "female",
+         "M": "male"
+      },
+      "Annotations": {
+         "IsAbout": {
+            "TermURL": "nb:Sex",
+            "Label": "Sex"
+         },
+         "VariableType": "Categorical",
+         "Levels": {
+            "F": {
+               "TermURL": "snomed:248152002",
+               "Label": "Female"
+            },
+            "M": {
+               "TermURL": "snomed:248153007",
+               "Label": "Male"
+            }
+         },
+         "MissingValues": [
+            "n/a"
+         ]
       }
    },
-   "age":{
-      "Description":"age in years at time of scan, clamped to 89",
-      "Units":"years"
+   "age": {
+      "Description": "age in years at time of scan, clamped to 89",
+      "Units": "years"
    },
-   "race":{
-      "Description":"race and ethnicity code from electronic health records",
-      "Levels":{
-         "b":"Black or African American",
-         "w":"White"
+   "race": {
+      "Description": "race and ethnicity code from electronic health records",
+      "Levels": {
+         "b": "Black or African American",
+         "w": "White"
       }
    },
-   "acuteischaemicstroke":{
-      "Description":"Was an acute ischemic stroke diagnosed at admission",
-      "Levels":{
-         "0":"Not acute ischemic stroke",
-         "1":"Acute ischemic stroke"
+   "acuteischaemicstroke": {
+      "Description": "Was an acute ischemic stroke diagnosed at admission",
+      "Levels": {
+         "0": "Not acute ischemic stroke",
+         "1": "Acute ischemic stroke"
       }
    },
-   "priorstroke":{
-      "Description":"Evidence of prior stroke",
-      "Levels":{
-         "0":"No chronic stroke",
-         "1":"Previous chronic stroke"
+   "priorstroke": {
+      "Description": "Evidence of prior stroke",
+      "Levels": {
+         "0": "No chronic stroke",
+         "1": "Previous chronic stroke"
       }
    },
-   "lesion_size_cc":{
-      "Description":"Volume of (combined acute and chronic) stroke.",
-      "Units":"cubic centimeters"
+   "lesion_size_cc": {
+      "Description": "Volume of (combined acute and chronic) stroke.",
+      "Units": "cubic centimeters"
    },
-   "bmi":{
-      "Description":"Body mass index.",
-      "Units":"score"
+   "bmi": {
+      "Description": "Body mass index.",
+      "Units": "score"
    },
-   "nihss":{
-      "Description":"NIH Stroke Score",
-      "Units":"score"
+   "nihss": {
+      "Description": "NIH Stroke Score",
+      "Units": "score",
+      "Annotations": {
+         "IsAbout": {
+            "TermURL": "nb:Assessment",
+            "Label": "Assessment Tool"
+         },
+         "VariableType": "Collection",
+         "IsPartOf": {
+            "TermURL": "snomed:450741005",
+            "Label": "National Institutes of Health stroke scale"
+         },
+         "MissingValues": [
+            "n/a",
+            "N/A",
+            "na",
+            "NA",
+            "nan",
+            "NaN",
+            ""
+         ]
+      }
    },
-   "gs_rankin_6isdeath":{
-      "Description":"Rankin score at discharge",
-      "Units":"score"
+   "gs_rankin_6isdeath": {
+      "Description": "Rankin score at discharge",
+      "Units": "score",
+      "Annotations": {
+         "IsAbout": {
+            "TermURL": "nb:Assessment",
+            "Label": "Assessment Tool"
+         },
+         "VariableType": "Collection",
+         "IsPartOf": {
+            "TermURL": "snomed:273729003",
+            "Label": "Rankin scale"
+         },
+         "MissingValues": [
+            "n/a",
+            "N/A",
+            "na",
+            "NA",
+            "nan",
+            "NaN",
+            ""
+         ]
+      }
+   },
+   "etiology": {
+      "Description": ""
+   },
+   "participant_id": {
+      "Description": "",
+      "Annotations": {
+         "IsAbout": {
+            "TermURL": "nb:ParticipantID",
+            "Label": "Participant ID"
+         },
+         "VariableType": "Identifier"
+      }
    }
 }
